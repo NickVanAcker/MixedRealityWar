@@ -12,11 +12,25 @@ public class GrabInteraction : MonoBehaviour
     Vector3 grabPos;
     public int CompletedObjectives;
     public float timeRemaining = 5;
+
+    public AudioClip AskForObjective0;
+    public AudioClip AskForObjective1;
+    public AudioClip AskForObjective2;
+    public AudioClip AskForObjective3;
+
+    private bool HasSpoken = false;
+
+    public AudioClip[] AskForObjectives;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        AskForObjectives = new AudioClip[4] { AskForObjective0, AskForObjective1, AskForObjective2, AskForObjective3 };
+
         HandL = GameObject.FindGameObjectWithTag("hand");
         TTI = GameObject.FindGameObjectWithTag("TTIScript").GetComponent<TableToInstructor>();
+        
     }
 
     // Update is called once per frame
@@ -42,9 +56,25 @@ public class GrabInteraction : MonoBehaviour
                     Object.Destroy(GameObject.FindGameObjectWithTag("Done"));
                     CompletedObjectives++;
                     timeRemaining = 5;
+                    HasSpoken = false;
                 }
 
             }
         }
+
+        InstructorSpeaks();
     }
+
+    void InstructorSpeaks()
+    {
+        if (HasSpoken == false)
+        {
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.clip = AskForObjectives[CompletedObjectives];
+            Debug.Log(CompletedObjectives);
+            audio.PlayDelayed(3);
+            HasSpoken = true;
+        }
+    }
+    
 }
