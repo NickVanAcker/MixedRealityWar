@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [System.Serializable]
 public struct Gesture
@@ -18,6 +19,7 @@ public class GestureDetector : MonoBehaviour
     private List<OVRBone> fingerBones;
     private Gesture previousGesture;
     private bool thereAreBones;
+    public Text infoText;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,8 +50,9 @@ public class GestureDetector : MonoBehaviour
         if (hasRecognized && !currentGesture.Equals(previousGesture))
         {
             Debug.Log("Current Gesture: " + currentGesture.name);
+            infoText.text = currentGesture.name;
             previousGesture = currentGesture;
-            //currentGesture.onRecongnized.Invoke();
+            currentGesture.onRecongnized.Invoke();
         }
     }
 
