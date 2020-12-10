@@ -18,6 +18,8 @@ public class GrabInteraction : MonoBehaviour
     public AudioClip AskForObjective2;
     public AudioClip AskForObjective3;
 
+    public AudioClip ThankYouClip;
+
     private bool HasSpoken = false;
 
     public AudioClip[] AskForObjectives;
@@ -56,7 +58,7 @@ public class GrabInteraction : MonoBehaviour
                     Object.Destroy(GameObject.FindGameObjectWithTag("Done"));
                     CompletedObjectives++;
                     timeRemaining = 5;
-                    HasSpoken = false;
+                    SayThankYou();
                 }
 
             }
@@ -77,4 +79,11 @@ public class GrabInteraction : MonoBehaviour
         }
     }
     
+    void SayThankYou()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.clip = ThankYouClip;
+        audio.PlayDelayed(1);
+        HasSpoken = false;
+    }
 }
