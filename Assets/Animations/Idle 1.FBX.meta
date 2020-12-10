@@ -1,287 +1,287 @@
 fileFormatVersion: 2
-guid: 20228d3ccfedbb44081151a9b249a2a3
+guid: 5955eeb7c02294a40b1411e715f6977f
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
       1: 100000
-    second: RigArmLeft1
+    second: //RootNode
   - first:
       1: 100002
-    second: RigArmLeft2
+    second: RigArmLeft1
   - first:
       1: 100004
-    second: RigArmLeft3
+    second: RigArmLeft2
   - first:
       1: 100006
-    second: RigArmLeftCollarbone
+    second: RigArmLeft3
   - first:
       1: 100008
-    second: RigArmLeftFing11
+    second: RigArmLeftCollarbone
   - first:
       1: 100010
-    second: RigArmLeftFing12
+    second: RigArmLeftFing11
   - first:
       1: 100012
-    second: RigArmLeftFing13
+    second: RigArmLeftFing12
   - first:
       1: 100014
-    second: RigArmLeftFing21
+    second: RigArmLeftFing13
   - first:
       1: 100016
-    second: RigArmLeftFing22
+    second: RigArmLeftFing21
   - first:
       1: 100018
-    second: RigArmLeftFing23
+    second: RigArmLeftFing22
   - first:
       1: 100020
-    second: RigArmLeftFing31
+    second: RigArmLeftFing23
   - first:
       1: 100022
-    second: RigArmLeftFing32
+    second: RigArmLeftFing31
   - first:
       1: 100024
-    second: RigArmLeftFing33
+    second: RigArmLeftFing32
   - first:
       1: 100026
-    second: RigArmLeftFing41
+    second: RigArmLeftFing33
   - first:
       1: 100028
-    second: RigArmLeftFing42
+    second: RigArmLeftFing41
   - first:
       1: 100030
-    second: RigArmLeftFing43
+    second: RigArmLeftFing42
   - first:
       1: 100032
-    second: RigArmRight1
+    second: RigArmLeftFing43
   - first:
       1: 100034
-    second: RigArmRight2
+    second: RigArmRight1
   - first:
       1: 100036
-    second: RigArmRight3
+    second: RigArmRight2
   - first:
       1: 100038
-    second: RigArmRightCollarbone
+    second: RigArmRight3
   - first:
       1: 100040
-    second: RigArmRightFing11
+    second: RigArmRightCollarbone
   - first:
       1: 100042
-    second: RigArmRightFing12
+    second: RigArmRightFing11
   - first:
       1: 100044
-    second: RigArmRightFing13
+    second: RigArmRightFing12
   - first:
       1: 100046
-    second: RigArmRightFing21
+    second: RigArmRightFing13
   - first:
       1: 100048
-    second: RigArmRightFing22
+    second: RigArmRightFing21
   - first:
       1: 100050
-    second: RigArmRightFing23
+    second: RigArmRightFing22
   - first:
       1: 100052
-    second: RigArmRightFing31
+    second: RigArmRightFing23
   - first:
       1: 100054
-    second: RigArmRightFing32
+    second: RigArmRightFing31
   - first:
       1: 100056
-    second: RigArmRightFing33
+    second: RigArmRightFing32
   - first:
       1: 100058
-    second: RigArmRightFing41
+    second: RigArmRightFing33
   - first:
       1: 100060
-    second: RigArmRightFing42
+    second: RigArmRightFing41
   - first:
       1: 100062
-    second: RigArmRightFing43
+    second: RigArmRightFing42
   - first:
       1: 100064
-    second: RigAss
+    second: RigArmRightFing43
   - first:
       1: 100066
-    second: RigHead
+    second: RigAss
   - first:
       1: 100068
-    second: RigLegLeft1
+    second: RigHead
   - first:
       1: 100070
-    second: RigLegLeft2
+    second: RigLegLeft1
   - first:
       1: 100072
-    second: RigLegLeft3
+    second: RigLegLeft2
   - first:
       1: 100074
-    second: RigLegRight1
+    second: RigLegLeft3
   - first:
       1: 100076
-    second: RigLegRight2
+    second: RigLegRight1
   - first:
       1: 100078
-    second: RigLegRight3
+    second: RigLegRight2
   - first:
       1: 100080
-    second: RigNeck
+    second: RigLegRight3
   - first:
       1: 100082
-    second: RigSpine1
+    second: RigNeck
   - first:
       1: 100084
-    second: RigSpine2
+    second: RigSpine1
   - first:
       1: 100086
-    second: RigSpine3
+    second: RigSpine2
   - first:
       1: 100088
-    second: //RootNode
+    second: RigSpine3
   - first:
       1: 100090
     second: Rig
   - first:
       4: 400000
-    second: RigArmLeft1
+    second: //RootNode
   - first:
       4: 400002
-    second: RigArmLeft2
+    second: RigArmLeft1
   - first:
       4: 400004
-    second: RigArmLeft3
+    second: RigArmLeft2
   - first:
       4: 400006
-    second: RigArmLeftCollarbone
+    second: RigArmLeft3
   - first:
       4: 400008
-    second: RigArmLeftFing11
+    second: RigArmLeftCollarbone
   - first:
       4: 400010
-    second: RigArmLeftFing12
+    second: RigArmLeftFing11
   - first:
       4: 400012
-    second: RigArmLeftFing13
+    second: RigArmLeftFing12
   - first:
       4: 400014
-    second: RigArmLeftFing21
+    second: RigArmLeftFing13
   - first:
       4: 400016
-    second: RigArmLeftFing22
+    second: RigArmLeftFing21
   - first:
       4: 400018
-    second: RigArmLeftFing23
+    second: RigArmLeftFing22
   - first:
       4: 400020
-    second: RigArmLeftFing31
+    second: RigArmLeftFing23
   - first:
       4: 400022
-    second: RigArmLeftFing32
+    second: RigArmLeftFing31
   - first:
       4: 400024
-    second: RigArmLeftFing33
+    second: RigArmLeftFing32
   - first:
       4: 400026
-    second: RigArmLeftFing41
+    second: RigArmLeftFing33
   - first:
       4: 400028
-    second: RigArmLeftFing42
+    second: RigArmLeftFing41
   - first:
       4: 400030
-    second: RigArmLeftFing43
+    second: RigArmLeftFing42
   - first:
       4: 400032
-    second: RigArmRight1
+    second: RigArmLeftFing43
   - first:
       4: 400034
-    second: RigArmRight2
+    second: RigArmRight1
   - first:
       4: 400036
-    second: RigArmRight3
+    second: RigArmRight2
   - first:
       4: 400038
-    second: RigArmRightCollarbone
+    second: RigArmRight3
   - first:
       4: 400040
-    second: RigArmRightFing11
+    second: RigArmRightCollarbone
   - first:
       4: 400042
-    second: RigArmRightFing12
+    second: RigArmRightFing11
   - first:
       4: 400044
-    second: RigArmRightFing13
+    second: RigArmRightFing12
   - first:
       4: 400046
-    second: RigArmRightFing21
+    second: RigArmRightFing13
   - first:
       4: 400048
-    second: RigArmRightFing22
+    second: RigArmRightFing21
   - first:
       4: 400050
-    second: RigArmRightFing23
+    second: RigArmRightFing22
   - first:
       4: 400052
-    second: RigArmRightFing31
+    second: RigArmRightFing23
   - first:
       4: 400054
-    second: RigArmRightFing32
+    second: RigArmRightFing31
   - first:
       4: 400056
-    second: RigArmRightFing33
+    second: RigArmRightFing32
   - first:
       4: 400058
-    second: RigArmRightFing41
+    second: RigArmRightFing33
   - first:
       4: 400060
-    second: RigArmRightFing42
+    second: RigArmRightFing41
   - first:
       4: 400062
-    second: RigArmRightFing43
+    second: RigArmRightFing42
   - first:
       4: 400064
-    second: RigAss
+    second: RigArmRightFing43
   - first:
       4: 400066
-    second: RigHead
+    second: RigAss
   - first:
       4: 400068
-    second: RigLegLeft1
+    second: RigHead
   - first:
       4: 400070
-    second: RigLegLeft2
+    second: RigLegLeft1
   - first:
       4: 400072
-    second: RigLegLeft3
+    second: RigLegLeft2
   - first:
       4: 400074
-    second: RigLegRight1
+    second: RigLegLeft3
   - first:
       4: 400076
-    second: RigLegRight2
+    second: RigLegRight1
   - first:
       4: 400078
-    second: RigLegRight3
+    second: RigLegRight2
   - first:
       4: 400080
-    second: RigNeck
+    second: RigLegRight3
   - first:
       4: 400082
-    second: RigSpine1
+    second: RigNeck
   - first:
       4: 400084
-    second: RigSpine2
+    second: RigSpine1
   - first:
       4: 400086
-    second: RigSpine3
+    second: RigSpine2
   - first:
       4: 400088
-    second: //RootNode
+    second: RigSpine3
   - first:
       4: 400090
     second: Rig
   - first:
       74: 7400000
-    second: Walk
+    second: Idle
   - first:
       95: 9500000
     second: //RootNode
@@ -305,7 +305,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -314,18 +314,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
+      name: Idle
       takeName: Take 001
       internalID: 0
       firstFrame: 0
-      lastFrame: 30
+      lastFrame: 300
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
@@ -340,6 +340,8 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
+        weight: 1
+      - path: Rig
         weight: 1
       - path: RigAss
         weight: 1
