@@ -7,7 +7,6 @@ public class ResetAnimation : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("ddddddddd");
         animator.SetBool("TakeInitiative", false);
         animator.SetBool("IsPanicking", false);
         animator.SetBool("GoBack", false);
