@@ -36,24 +36,25 @@ public class GestureDetector : MonoBehaviour
             FindBones();
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Save();
+        }
+
         if (thereAreBones)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            Gesture currentGesture = Recognize();
+            bool hasRecognized = !currentGesture.Equals(new Gesture());
+
+            if (hasRecognized && !currentGesture.Equals(previousGesture))
             {
-                Save();
+                Debug.Log("Current Gesture: " + currentGesture.name);
+                infoText.text = currentGesture.name;
+                previousGesture = currentGesture;
+                currentGesture.onRecongnized.Invoke();
             }
         }
 
-        Gesture currentGesture = Recognize();
-        bool hasRecognized = !currentGesture.Equals(new Gesture());
-
-        if (hasRecognized && !currentGesture.Equals(previousGesture))
-        {
-            Debug.Log("Current Gesture: " + currentGesture.name);
-            infoText.text = currentGesture.name;
-            previousGesture = currentGesture;
-            currentGesture.onRecongnized.Invoke();
-        }
     }
 
 
@@ -72,6 +73,7 @@ public class GestureDetector : MonoBehaviour
         g.fingerData = data;
 
         gestures.Add(g);
+
     }
 
     Gesture Recognize()

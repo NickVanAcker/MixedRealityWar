@@ -35,10 +35,6 @@ public class PanickedCivillian : MonoBehaviour
             isPanicking = true;
             Panic();
         }
-
-        CalmDown();
-
-
     }
 
     void Panic()
