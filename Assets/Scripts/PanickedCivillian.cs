@@ -15,12 +15,9 @@ public class PanickedCivillian : MonoBehaviour
     bool isPanicking = false;
     bool hasSpoken = false;
 
-
     // Start is called before the first frame update
     void Start()
     {
-
-
         audio = GetComponent<AudioSource>();
 
         animator = gameObject.GetComponent<Animator>();
@@ -33,7 +30,7 @@ public class PanickedCivillian : MonoBehaviour
             index = 0;
         time += Time.deltaTime;
 
-        if ((time > 6 && time < 7) || animator.GetBool("TakeInitiative"))
+        if ((time > 60 && time < 70) || animator.GetBool("TakeInitiative"))
         {
             isPanicking = true;
             Panic();
@@ -66,9 +63,9 @@ public class PanickedCivillian : MonoBehaviour
         }
     }
 
-    void CalmDown()
+    public void CalmDown()
     {
-        if ((time > 15 && isPanicking == true) && (animator.GetBool("TakeInitiative") == true && animator.GetBool("IsPanicking") == true)||(animator.GetBool("TakeInitiative") == false && animator.GetBool("IsPanicking"))) //condition for handsignal
+        if ((isPanicking == true) && (animator.GetBool("TakeInitiative") == true && animator.GetBool("IsPanicking") == true)||(animator.GetBool("TakeInitiative") == false && animator.GetBool("IsPanicking"))) //condition for handsignal
         {
             animator.SetBool("TakeInitiative", false);
             transform.Translate(new Vector3(0, 0, -1) * Time.deltaTime * walkSpeed);
