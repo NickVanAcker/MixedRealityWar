@@ -70,10 +70,14 @@ public class GrabInteraction : MonoBehaviour
         if (HasSpoken == false)
         {
             AudioSource audio = GetComponent<AudioSource>();
-            audio.clip = AskForObjectives[CompletedObjectives];
-            Debug.Log(CompletedObjectives);
-            audio.PlayDelayed(3);
-            HasSpoken = true;
+            if (CompletedObjectives < AskForObjectives.Length)
+            {
+                audio.clip = AskForObjectives[CompletedObjectives];
+                Debug.Log(CompletedObjectives);
+                audio.PlayDelayed(3);
+                HasSpoken = true;
+            }
+
         }
     }
     

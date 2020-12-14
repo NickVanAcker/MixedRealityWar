@@ -30,6 +30,8 @@ public class PanickedCivillian : MonoBehaviour
             index = 0;
         time += Time.deltaTime;
 
+
+
         if ((time > 60 && time < 70) || animator.GetBool("TakeInitiative"))
         {
             isPanicking = true;
@@ -61,11 +63,10 @@ public class PanickedCivillian : MonoBehaviour
 
     public void CalmDown()
     {
-        if ((isPanicking == true) && (animator.GetBool("TakeInitiative") == true && animator.GetBool("IsPanicking") == true)||(animator.GetBool("TakeInitiative") == false && animator.GetBool("IsPanicking"))) //condition for handsignal
+        if ((isPanicking == true) &&(animator.GetBool("TakeInitiative") == true && animator.GetBool("IsPanicking") == true)||(animator.GetBool("TakeInitiative") == false && animator.GetBool("IsPanicking"))) //condition for handsignal
         {
             animator.SetBool("TakeInitiative", false);
             transform.Translate(new Vector3(0, 0, -1) * Time.deltaTime * walkSpeed);
-            
         }
 
         if (isPanicking == true && (animator.GetBool("TakeInitiative") == false && animator.GetBool("IsPanicking") == false))
@@ -74,7 +75,6 @@ public class PanickedCivillian : MonoBehaviour
             time = 0;
             hasSpoken = false;
             index++;
-
         }
     }
     
