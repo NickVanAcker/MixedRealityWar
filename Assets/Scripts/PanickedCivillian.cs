@@ -22,6 +22,10 @@ public class PanickedCivillian : MonoBehaviour
         audio = GetComponent<AudioSource>();
 
         animator = gameObject.GetComponent<Animator>();
+
+        Speak();
+        hasSpoken = false;
+        index++;
     }        
 
     // Update is called once per frame
@@ -36,7 +40,7 @@ public class PanickedCivillian : MonoBehaviour
             CalmDown();
         }
 
-        if ((time > 6 && time < 7) || animator.GetBool("TakeInitiative"))
+        if ((time > 60 && time < 70) || animator.GetBool("TakeInitiative"))
         {
             isPanicking = true;
             Panic();
