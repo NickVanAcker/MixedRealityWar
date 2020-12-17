@@ -24,6 +24,8 @@ public class EvironmentSound : MonoBehaviour
     float timeI;
     float timeJ;
     float timeK;
+    float time;
+    int count = 0;
 
     AudioSource audio1;
     AudioSource audio2;
@@ -40,6 +42,8 @@ public class EvironmentSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+
         timeI += Time.deltaTime;
         timeJ += Time.deltaTime;
         timeK += Time.deltaTime;
@@ -66,7 +70,7 @@ public class EvironmentSound : MonoBehaviour
             ExplossionSoundClip(j);
 
         }
-        if (timeJ > 14 && timeJ < 15)
+        if (timeJ > 12 && timeJ < 13)
         {
             Debug.Log("done2");
             hasHappenedJ = false;
@@ -91,6 +95,14 @@ public class EvironmentSound : MonoBehaviour
             if (k == kMax)
                 k = 0;
 
+        }
+
+        if(time > 5)
+        {
+            count++;
+            if (count > 2)
+                count = 0;
+            ChangeSource();
         }
     }
 
@@ -121,4 +133,30 @@ public class EvironmentSound : MonoBehaviour
 
         hasHappenedK = true;
     }
+
+    void ChangeSource()
+    {
+        if (count == 0)
+        {
+            audio3 = gameObject.transform.GetChild(3).GetComponent<AudioSource>();
+            audio2 = gameObject.transform.GetChild(1).GetComponent<AudioSource>();
+            audio1 = gameObject.transform.GetChild(0).GetComponent<AudioSource>();
+        }
+
+        if (count == 1)
+        {
+            audio3 = gameObject.transform.GetChild(0).GetComponent<AudioSource>();
+            audio2 = gameObject.transform.GetChild(3).GetComponent<AudioSource>();
+            audio1 = gameObject.transform.GetChild(1).GetComponent<AudioSource>();
+        }
+
+        if (count == 2)
+        {
+            audio3 = gameObject.transform.GetChild(1).GetComponent<AudioSource>();
+            audio2 = gameObject.transform.GetChild(0).GetComponent<AudioSource>();
+            audio1 = gameObject.transform.GetChild(3).GetComponent<AudioSource>();
+        }
+        time = 0;
+    } 
+        
 }
