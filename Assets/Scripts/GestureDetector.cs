@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -116,3 +117,15 @@ public class GestureDetector : MonoBehaviour
         }
     }
 }
+=======
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour
+{
+    public OVRSkeleton skeleton;
+
+
+}
+>>>>>>> Stashed changes
