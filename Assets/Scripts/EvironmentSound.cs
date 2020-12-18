@@ -15,7 +15,7 @@ public class EvironmentSound : MonoBehaviour
 
     private int iMax = 5;
     private int jMax = 8;
-    private int kMax = 8;
+    private int kMax = 4;
 
     private bool hasHappenedI = false;
     private bool hasHappenedJ = false;
@@ -55,9 +55,9 @@ public class EvironmentSound : MonoBehaviour
             ShootingSoundClip(i);
 
         }
-        if(timeI > 6 && timeI < 7)
+        if(timeI > 16 && timeI < 17)
         {
-            Debug.Log("done1");
+            Debug.Log("done");
             hasHappenedI = false;
             timeI = 0;
             i++;
@@ -70,9 +70,13 @@ public class EvironmentSound : MonoBehaviour
             ExplossionSoundClip(j);
 
         }
+<<<<<<< HEAD
         if (timeJ > 12 && timeJ < 13)
+=======
+        if (timeJ > 21 && timeJ < 22)
+>>>>>>> parent of f8b08ee... fixed soundbug
         {
-            Debug.Log("done2");
+            Debug.Log("done");
             hasHappenedJ = false;
             timeJ = 0;
             j++;
@@ -86,9 +90,9 @@ public class EvironmentSound : MonoBehaviour
             GroansAndMoansClip(k);
 
         }
-        if (timeK > 25 && timeK < 26)
+        if (timeK > 13 && timeK < 15)
         {
-            Debug.Log("done3");
+            Debug.Log("done");
             hasHappenedK = false;
             timeK = 0;
             k++;
@@ -112,7 +116,7 @@ public class EvironmentSound : MonoBehaviour
 
         audio1.clip = ShootingSound[index];
 
-        audio1.Play();
+        audio1.PlayDelayed(14);
         hasHappenedI = true;
     }
 
@@ -121,7 +125,7 @@ public class EvironmentSound : MonoBehaviour
 
         audio2.clip = ExplossionSound[index];
 
-        audio2.Play();
+        audio2.PlayDelayed(20);
         hasHappenedJ = true;
     }
     void GroansAndMoansClip(int index)
@@ -129,7 +133,7 @@ public class EvironmentSound : MonoBehaviour
 
         audio3.clip = Groans[index];
 
-        audio3.Play();
+        audio3.PlayDelayed(10);
 
         hasHappenedK = true;
     }
