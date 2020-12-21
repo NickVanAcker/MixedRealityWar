@@ -9,6 +9,8 @@ public class GrabInteraction : MonoBehaviour
 
     public TableToInstructor TTI;
 
+    public AudioClip heartBeat2;
+
     Vector3 grabPos;
     public int CompletedObjectives;
     public float timeRemaining = 5;
@@ -38,6 +40,11 @@ public class GrabInteraction : MonoBehaviour
     {
         Objectives = GameObject.FindGameObjectsWithTag("Objective");
 
+
+        if (CompletedObjectives == 2)
+        {
+            HeartBeatManager();
+        }
 
         if (TTI.ObjToGrab != null)
         {
@@ -79,6 +86,18 @@ public class GrabInteraction : MonoBehaviour
             }
 
         }
+    }
+
+
+    void HeartBeatManager()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        AudioSource audioHearBeat = player.GetComponent<AudioSource>() ;
+
+        audioHearBeat.clip = heartBeat2;
+        audioHearBeat.Play();
+
+
     }
     
 }
