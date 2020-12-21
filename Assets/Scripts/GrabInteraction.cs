@@ -27,6 +27,7 @@ public class GrabInteraction : MonoBehaviour
     private bool HasSpoken = false;
 
     public AudioClip[] AskForObjectives;
+    float time;
 
 
     // Start is called before the first frame update
@@ -50,6 +51,15 @@ public class GrabInteraction : MonoBehaviour
             HeartBeatManager();
         }
 
+        if(CompletedObjectives == 5)
+        {
+            time += Time.deltaTime;
+            Debug.Log(time);
+            if(time > 16)
+            {
+                Application.Quit();
+            }
+        }
         
 
         if(CompletedObjectives == 4)
@@ -58,6 +68,7 @@ public class GrabInteraction : MonoBehaviour
             HeliArrives();
             CompletedObjectives++;
         }
+
 
         if (TTI.ObjToGrab != null)
         {
