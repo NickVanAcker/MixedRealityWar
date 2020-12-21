@@ -11,6 +11,8 @@ public class GrabInteraction : MonoBehaviour
 
     public AudioClip heartBeat2;
 
+    public AudioClip endingClip;
+
     Vector3 grabPos;
     public int CompletedObjectives;
     public float timeRemaining = 5;
@@ -19,6 +21,8 @@ public class GrabInteraction : MonoBehaviour
     public AudioClip AskForObjective1;
     public AudioClip AskForObjective2;
     public AudioClip AskForObjective3;
+
+    public AudioClip Heli;
 
     private bool HasSpoken = false;
 
@@ -44,6 +48,15 @@ public class GrabInteraction : MonoBehaviour
         if (CompletedObjectives == 2)
         {
             HeartBeatManager();
+        }
+
+        
+
+        if(CompletedObjectives == 4)
+        {
+            EndGame();
+            HeliArrives();
+            CompletedObjectives++;
         }
 
         if (TTI.ObjToGrab != null)
@@ -98,6 +111,22 @@ public class GrabInteraction : MonoBehaviour
         audioHearBeat.Play();
 
 
+    }
+
+    void EndGame()
+    {
+        AudioSource audio = gameObject.transform.GetChild(1).GetComponent<AudioSource>();
+
+        audio.clip = endingClip;
+        audio.PlayDelayed(3);
+    }
+
+    void HeliArrives()
+    {
+        AudioSource audio = gameObject.transform.GetChild(0).GetComponent<AudioSource>();
+
+        audio.clip = Heli;
+        audio.PlayDelayed(5);
     }
     
 }
