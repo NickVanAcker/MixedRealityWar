@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GrabInteraction : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class GrabInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CompletedObjectives = 4;
         AskForObjectives = new AudioClip[4] { AskForObjective0, AskForObjective1, AskForObjective2, AskForObjective3 };
 
         HandL = GameObject.FindGameObjectWithTag("hand");
@@ -57,7 +59,7 @@ public class GrabInteraction : MonoBehaviour
             Debug.Log(time);
             if(time > 16)
             {
-                Application.Quit();
+                SceneManager.LoadScene("GameOver");
             }
         }
         
