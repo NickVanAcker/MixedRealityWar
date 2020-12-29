@@ -34,7 +34,6 @@ public class GrabInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CompletedObjectives = 4;
         AskForObjectives = new AudioClip[4] { AskForObjective0, AskForObjective1, AskForObjective2, AskForObjective3 };
 
         HandL = GameObject.FindGameObjectWithTag("hand");
@@ -96,6 +95,9 @@ public class GrabInteraction : MonoBehaviour
         }
 
         InstructorSpeaks();
+
+
+        ReplayVoiceLine();
     }
 
     void InstructorSpeaks()
@@ -140,6 +142,18 @@ public class GrabInteraction : MonoBehaviour
 
         audio.clip = Heli;
         audio.PlayDelayed(5);
+    }
+
+    void ReplayVoiceLine()
+    {
+        if (OVRInput.Get(OVRInput.Button.One))
+        {
+            AudioSource audio = GetComponent<AudioSource>();
+
+            audio.clip = AskForObjectives[CompletedObjectives];
+            audio.Play(); 
+        }
+
     }
     
 }
