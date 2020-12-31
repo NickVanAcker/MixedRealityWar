@@ -55,7 +55,7 @@ public class EvironmentSound : MonoBehaviour
             ShootingSoundClip(i);
 
         }
-        if(timeI > 6 && timeI < 7)
+        if(timeI > 2 && timeI < 3)
         {
             Debug.Log("done1");
             hasHappenedI = false;
@@ -70,7 +70,7 @@ public class EvironmentSound : MonoBehaviour
             ExplossionSoundClip(j);
 
         }
-        if (timeJ > 12 && timeJ < 13)
+        if (timeJ > 6 && timeJ < 8)
         {
             Debug.Log("done2");
             hasHappenedJ = false;
@@ -86,7 +86,7 @@ public class EvironmentSound : MonoBehaviour
             GroansAndMoansClip(k);
 
         }
-        if (timeK > 25 && timeK < 26)
+        if (timeK > 12 && timeK < 13)
         {
             Debug.Log("done3");
             hasHappenedK = false;
