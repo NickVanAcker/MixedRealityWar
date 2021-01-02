@@ -31,19 +31,27 @@ public class PanickedCivillian : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(time < 20)
+            isBeingCalmed = false;
+
         if (index == 11)
             index = 0;
         time += Time.deltaTime;
 
         if (isBeingCalmed && isPanicking)
         {
+           
             CalmDown();
         }
 
-        if ((time > 60 && time < 70) || animator.GetBool("TakeInitiative"))
+
+        if (isBeingCalmed == false)
         {
-            isPanicking = true;
-            Panic();
+            if ((time > 60 && time < 62) || animator.GetBool("TakeInitiative"))
+            {
+                isPanicking = true;
+                Panic();
+            }
         }
     }
 
