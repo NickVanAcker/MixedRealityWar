@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 21233923}
   m_Layer: 0
   m_Name: Point Light
-  m_TagString: Untagged
+  m_TagString: light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1027,7 +1027,7 @@ GameObject:
   - component: {fileID: 186816389}
   m_Layer: 0
   m_Name: Point Light (2)
-  m_TagString: Untagged
+  m_TagString: light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5263,7 +5263,7 @@ GameObject:
   - component: {fileID: 1032412965}
   m_Layer: 0
   m_Name: Point Light (3)
-  m_TagString: Untagged
+  m_TagString: light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5352,9 +5352,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1048472858}
+  - component: {fileID: 1048472859}
   m_Layer: 0
   m_Name: Lights
-  m_TagString: Untagged
+  m_TagString: lightManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5378,6 +5379,24 @@ Transform:
   m_Father: {fileID: 1323165325}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1048472859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048472857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7aa91b1c9ae1441abfce398b7d47ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 21233923}
+  - {fileID: 1559853060}
+  - {fileID: 186816389}
+  - {fileID: 1032412965}
+  - {fileID: 1923073834}
 --- !u!4 &1049460690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1fcfd74f04bdf464aa90886ce55bbba3,
@@ -12205,7 +12224,7 @@ GameObject:
   - component: {fileID: 1559853060}
   m_Layer: 0
   m_Name: Point Light (1)
-  m_TagString: Untagged
+  m_TagString: light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13397,7 +13416,7 @@ GameObject:
   - component: {fileID: 1923073834}
   m_Layer: 0
   m_Name: Point Light (4)
-  m_TagString: Untagged
+  m_TagString: light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

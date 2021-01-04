@@ -9,6 +9,8 @@ TagManager:
   - Done
   - hand
   - TTIScript
+  - light
+  - lightManager
   layers:
   - Default
   - TransparentFX

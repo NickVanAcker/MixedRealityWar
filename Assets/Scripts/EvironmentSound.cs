@@ -27,6 +27,8 @@ public class EvironmentSound : MonoBehaviour
     float time;
     int count = 0;
 
+    LightFlicker lf;
+
     AudioSource audio1;
     AudioSource audio2;
     AudioSource audio3;
@@ -37,6 +39,8 @@ public class EvironmentSound : MonoBehaviour
         audio3 = gameObject.transform.GetChild(3).GetComponent<AudioSource>();
         audio2 = gameObject.transform.GetChild(1).GetComponent<AudioSource>();
         audio1 = gameObject.transform.GetChild(0).GetComponent<AudioSource>();
+
+        lf = GameObject.FindGameObjectWithTag("lightManager").GetComponent<LightFlicker>();
     }
 
     // Update is called once per frame
@@ -67,10 +71,11 @@ public class EvironmentSound : MonoBehaviour
 
         if (!hasHappenedJ)
         {
+            StartCoroutine(lf.Flicker());
             ExplossionSoundClip(j);
 
         }
-        if (timeJ > 6 && timeJ < 8)
+        if (timeJ > 17 && timeJ < 18)
         {
             Debug.Log("done2");
             hasHappenedJ = false;
@@ -97,7 +102,7 @@ public class EvironmentSound : MonoBehaviour
 
         }
 
-        if(time > 5)
+        if(time > 3)
         {
             count++;
             if (count > 2)
