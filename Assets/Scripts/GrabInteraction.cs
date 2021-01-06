@@ -146,7 +146,7 @@ public class GrabInteraction : MonoBehaviour
 
     void ReplayVoiceLine()
     {
-        if (OVRInput.Get(OVRInput.Button.One))
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
             AudioSource audio = GetComponent<AudioSource>();
 
