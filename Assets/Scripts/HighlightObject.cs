@@ -18,9 +18,12 @@ public class HighlightObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Objectives = GameObject.FindGameObjectsWithTag("Objective");
-        Vector3 ObjectPos = Objectives[0].transform.position;
-        ObjectPos = new Vector3(ObjectPos.x, ObjectPos.y + 0.4f, ObjectPos.z);
-        Effect.transform.position = ObjectPos;
+        if (Objectives.Length > 1)
+        {
+            Objectives = GameObject.FindGameObjectsWithTag("Objective");
+            Vector3 ObjectPos = Objectives[0].transform.position;
+            ObjectPos = new Vector3(ObjectPos.x, ObjectPos.y + 0.4f, ObjectPos.z);
+            Effect.transform.position = ObjectPos;
+        }
     }
 }
