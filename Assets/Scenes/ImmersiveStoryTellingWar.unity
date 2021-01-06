@@ -5133,10 +5133,10 @@ MonoBehaviour:
   endingClip: {fileID: 8300000, guid: 8f2ae13479157c8419228536bf9c8bf4, type: 3}
   CompletedObjectives: 0
   timeRemaining: 3
-  AskForObjective0: {fileID: 8300000, guid: 9c82cb630d0dbf947a235df4c2f3e7ad, type: 3}
-  AskForObjective1: {fileID: 8300000, guid: f87aa8e24e6b7ac448a360c07b0d4a20, type: 3}
-  AskForObjective2: {fileID: 8300000, guid: 3b159760969e6f148b769a8f41340b4d, type: 3}
-  AskForObjective3: {fileID: 8300000, guid: deebeb2a1ed37a947ba9764d0c1e2e4d, type: 3}
+  AskForObjective0: {fileID: 8300000, guid: 079000cad2046114680233596ad0efba, type: 3}
+  AskForObjective1: {fileID: 8300000, guid: 9fe149ed6c099814ca4ed4e0d644957b, type: 3}
+  AskForObjective2: {fileID: 8300000, guid: 3583885c3f9e88a48b67b70431817f84, type: 3}
+  AskForObjective3: {fileID: 8300000, guid: a7a63308cb091f345ac7276fb5e5d7e1, type: 3}
   Heli: {fileID: 8300000, guid: ce30645c07c3f0d489ccda8a2bd5808f, type: 3}
   AskForObjectives: []
 --- !u!4 &1022659656
